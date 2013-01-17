@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kamui/workflow_sequel_adapter.png?branch=master)](http://travis-ci.org/kamui/workflow_sequel_adapter)
+
 # workflow_sequel_adapter
 
 This gem is a persistence adapter for the [Workflow](http://github.com/geekq/workflow) gem. All you do is include this adapter, and `Workflow` will use the `workflow_column` to retrieve and persist the workflow state.
