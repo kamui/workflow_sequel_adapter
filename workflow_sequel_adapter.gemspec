@@ -22,5 +22,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "minitest"
-  gem.add_development_dependency "sqlite3"
+
+  if RUBY_PLATFORM == "java"
+    gem.add_development_dependency "jdbc-sqlite3"
+  else
+    gem.add_development_dependency "sqlite3-ruby"
+  end
 end

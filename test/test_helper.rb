@@ -3,7 +3,11 @@ require 'workflow'
 require 'workflow_sequel_adapter'
 require 'minitest/autorun'
 
-DB = Sequel.sqlite
+if RUBY_PLATFORM == "java"
+  DB = Sequel.connect('jdbc:sqlite::memory:')
+else
+  DB = Sequel.sqlite
+end
 
 Sequel::Model.raise_on_save_failure = false
 
