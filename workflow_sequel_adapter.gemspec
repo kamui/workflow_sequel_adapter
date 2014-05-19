@@ -26,6 +26,6 @@ Gem::Specification.new do |gem|
   if RUBY_PLATFORM == "java"
     gem.add_development_dependency "jdbc-sqlite3"
   else
-    gem.add_development_dependency "sqlite3-ruby"
+    gem.add_development_dependency "sqlite3"
   end
 end
